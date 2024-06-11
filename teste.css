@@ -56,13 +56,14 @@ footer {
 }
 @media (width > 70rem) {
   #app {
+    background-color: #fff;
     display: grid;
     grid:
-      "header header " minmax(100px, auto)
-      "main  aside " minmax(100px, auto)
-      "footer footer" minmax(100px, auto)
-      / 1fr 1fr;
-    gap: 2rem 3rem;
+      "header header header " minmax(0px, auto)
+      "main section aside " minmax(0px, auto)
+      "footer footer footer" minmax(0px, auto)
+      / 1fr 1fr 1fr;
+    gap: 1rem 2rem;
     justify-items: center;
     height: 100vh;
   }
@@ -78,6 +79,9 @@ footer {
     margin-inline: auto;
     padding: 4rem 6rem;
     box-sizing: content-box;
+  }
+  section {
+    grid-area: section;
   }
   aside {
     grid-area: aside;
